@@ -10,7 +10,3 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::test(string text){
-    cout << text << endl;
-}

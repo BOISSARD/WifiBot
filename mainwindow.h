@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
@@ -19,8 +17,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
-    void test(string text);
 
 private:
     Ui::MainWindow *ui;

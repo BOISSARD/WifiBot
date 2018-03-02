@@ -1,4 +1,6 @@
 #include "mainwindow.h"
+#include "outputmanager.h"
+#include "consoleoutputmanager.h"
 
 #include <QApplication>
 
@@ -10,7 +12,11 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    w.test("/n================/nTest/n=============/n");
+    OutputManager *op;
+    op = new ConsoleOutputManager();
+
+    op->display("\n==========\nYOLO TEST\n=========");
+    //op->display();
 
     return a.exec();
 }
