@@ -1,8 +1,7 @@
 #include "inputmanager.h"
 
-InputManager::InputManager()
-{
+InputManager::InputManager(){}
 
+Direction InputManager::getDirection(){
+    return Direction::none;
 }
-
-int InputManager::getDirection(){ return 0; }

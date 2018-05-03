@@ -10,7 +10,8 @@ class OutputManager
 {
     public:
         OutputManager();
-        virtual void display(string text);
+        void display(int number);
+        virtual void display(string text = "");
 };
 
 #endif // OUTPUTMANAGER_H

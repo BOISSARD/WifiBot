@@ -17,15 +17,23 @@ SOURCES += main.cpp\
         inputmanager.cpp \
         keyboardinputmanager.cpp \
         outputmanager.cpp \
-        consoleoutputmanager.cpp
+        consoleoutputmanager.cpp \
+    direction.cpp \
+    connexionmanager.cpp \
+    wificonnexionmanager.cpp
 
 HEADERS  += mainwindow.h \
         inputmanager.h \
         keyboardinputmanager.h \
         outputmanager.h \
-        consoleoutputmanager.h
+        consoleoutputmanager.h \
+    direction.h \
+    connexionmanager.h \
+    wificonnexionmanager.h
 
 FORMS    += mainwindow.ui
 
 #CONFIG   -= qt
 CONFIG   += console
+
+QT += gui
