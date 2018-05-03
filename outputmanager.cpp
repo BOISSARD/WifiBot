@@ -1,8 +1,5 @@
 #include "outputmanager.h"
 
-OutputManager::OutputManager()
-{
-
-}
+OutputManager::OutputManager(){}
 
 void OutputManager::display(string text){}

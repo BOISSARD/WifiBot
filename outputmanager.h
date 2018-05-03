@@ -1,6 +1,7 @@
 #ifndef OUTPUTMANAGER_H
 #define OUTPUTMANAGER_H
 
+#include <QTextStream>
 #include <iostream>
 
 using namespace std;

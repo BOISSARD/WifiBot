@@ -5,4 +5,4 @@ InputManager::InputManager()
 
 }
 
-int InputManager::getDirection(){}
+int InputManager::getDirection(){ return 0; }

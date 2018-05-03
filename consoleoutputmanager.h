@@ -1,9 +1,6 @@
 #ifndef CONSOLEOUTPUTMANAGER_H
 #define CONSOLEOUTPUTMANAGER_H
 
-#include <stdio.h>
-#include <iostream>
-
 #include "outputmanager.h"
 
 using namespace std;
