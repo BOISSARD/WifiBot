@@ -30,7 +30,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_connectionBtn_preesed()
+void MainWindow::on_connectionBtn_pressed()
 {
     qDebug() << "Demande de connexion !";
+
+
 }

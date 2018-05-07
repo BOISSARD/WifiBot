@@ -2,11 +2,11 @@
 
 RobotOutputManager::RobotOutputManager(){}
 
-void move(Direction direction, float vitesse){
+void RobotOutputManager::move(Direction direction, float vitesse){
 
 }
 
-void moveCamera(Direction direction){
+void RobotOutputManager::moveCamera(Direction direction){
 
 }
 

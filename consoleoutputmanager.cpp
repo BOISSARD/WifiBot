@@ -6,10 +6,10 @@ void ConsoleOutputManager::display(string text){
     cout << text << endl;
 }
 
-void move(Direction direction, float vitesse){
-    display("Le robot se déplace dans la direction " + direction + " à la vitesse " + vitesse);
+void ConsoleOutputManager::move(Direction direction, float vitesse){
+    this->display("Le robot se déplace dans la direction " + to_string((int)direction) + " à la vitesse " + to_string(vitesse));
 }
 
-void moveCamera(Direction direction){
-    display("La caméra se déplace dans la direction " + direction);
+void ConsoleOutputManager::moveCamera(Direction direction){
+    this->display("La caméra se déplace dans la direction " + to_string((int)direction));
 }

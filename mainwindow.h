@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <iostream>
+#include "outputmanager.h"
 
 using namespace std;
 
@@ -20,9 +21,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    OutputManager *output;
 
 private slots:
-    void on_connectionBtn_preesed();
+    void on_connectionBtn_pressed();
 };
 
 #endif // MAINWINDOW_H
