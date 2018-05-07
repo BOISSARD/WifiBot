@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    OutputManager *op;
+    /*OutputManager *op;
     op = new ConsoleOutputManager();
 
     InputManager *ip;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     op->display("=========\nYOLO TEST\n=========");
     op->display();
     while(1)
-    op->display((int)ip->getDirection());
+    op->display((int)ip->getDirection());*/
 
     return a.exec();
 }
