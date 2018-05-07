@@ -38,36 +38,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="0">
-        <widget class="VlcWidgetVideo" name="Video" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>320</width>
-           <height>240</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>1080</width>
-           <height>960</height>
-          </size>
-         </property>
-         <property name="sizeIncrement">
-          <size>
-           <width>1</width>
-           <height>1</height>
-          </size>
-         </property>
-         <property name="autoFillBackground">
-          <bool>true</bool>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <layout class="QGridLayout" name="gridLayout_4"/>
      </widget>
     </item>
     <item>
@@ -106,99 +77,10 @@
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="2" column="1">
-           <widget class="QLabel" name="lBatterie">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>16777215</height>
-             </size>
-            </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="connectionBtn">
             <property name="text">
-             <string>Batterie</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QSlider" name="batterie">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="maximum">
-             <number>255</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <layout class="QGridLayout" name="gridLayout_6">
-            <item row="0" column="1">
-             <widget class="QLCDNumber" name="OdoR"/>
-            </item>
-            <item row="0" column="0">
-             <widget class="QLCDNumber" name="OdoL"/>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="lVitesseD">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Vitesse</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QSlider" name="vitesseD">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="minimum">
-             <number>-100</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Odométrie</string>
+             <string>Connexion</string>
             </property>
            </widget>
           </item>
@@ -239,12 +121,12 @@
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="JoyPad" name="widget1" native="true"/>
-    </item>
-    <item>
-     <widget class="JoyPad" name="widget2" native="true"/>
-    </item>
+          <item>
+           <widget class="JoyPad" name="widget1" native="true"/>
+          </item>
+          <item>
+           <widget class="JoyPad" name="widget2" native="true"/>
+          </item>
          </layout>
         </widget>
        </item>
@@ -253,34 +135,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>884</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuConnexion">
-    <property name="title">
-     <string>Connexion</string>
-    </property>
-    <addaction name="actionConnecter_en_TCP"/>
-    <addaction name="actionD_connexion"/>
-    <addaction name="separator"/>
-    <addaction name="actionFermer"/>
-   </widget>
-   <widget class="QMenu" name="menuControle">
-    <property name="title">
-     <string>Controle</string>
-    </property>
-    <addaction name="actionFenetre"/>
-    <addaction name="actionWiimote"/>
-   </widget>
-   <addaction name="menuConnexion"/>
-   <addaction name="menuControle"/>
-  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -289,7 +144,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionConnecter_en_TCP">
    <property name="text">
     <string>Connecter en TCP</string>
@@ -340,16 +194,6 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
-  <customwidget>
-   <class>VlcWidgetVideo</class>
-   <extends>QWidget</extends>
-   <header>vlc-qt/WidgetVideo.h</header>
-   <container>1</container>
-   <slots>
-    <signal>fullscreen()</signal>
-    <slot>toggleFullscreen()</slot>
-   </slots>
-  </customwidget>
   <customwidget>
    <class>JoyPad</class>
    <extends>QWidget</extends>

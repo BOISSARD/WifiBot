@@ -8,7 +8,7 @@ KeyboardInputManager::KeyboardInputManager()
 Direction KeyboardInputManager::getDirection(){
     int c = 0;//getch();
     do {
-        c = getch();
+        //c = getch();
     }while(c == 224);
     return intToDirection(c);//Direction::rightward;
 }

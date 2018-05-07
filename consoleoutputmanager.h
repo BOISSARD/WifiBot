@@ -9,7 +9,9 @@ class ConsoleOutputManager : public OutputManager
 {
     public:
         ConsoleOutputManager();
-        virtual void display(string text);
+        void display(string text);
+        void move(Direction direction, float vitesse);
+        void moveCamera(Direction direction);
 };
 
 #endif // CONSOLEOUTPUTMANAGER_H

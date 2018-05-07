@@ -20,6 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void on_connectionBtn_preesed();
 };
 
 #endif // MAINWINDOW_H

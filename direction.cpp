@@ -1,3 +1,3 @@
 #include "direction.h"
 
-Direction::Direction(){}
+//Direction::Direction(){}

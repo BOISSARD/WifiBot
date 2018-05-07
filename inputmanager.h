@@ -10,7 +10,6 @@ using namespace std;
 
 class InputManager
 {
-
     public:
         InputManager();
         virtual Direction getDirection();

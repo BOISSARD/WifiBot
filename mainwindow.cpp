@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 {
     ui->setupUi(this);
 
-    connect(ui->widget1, &JoyPad::xChanged, this, [this](float x){
+    /*connect(ui->widget1, &JoyPad::xChanged, this, [this](float x){
         qDebug() << "Joy1 x: " << x << " y: " << ui->widget1->y();
     });
     connect(ui->widget1, &JoyPad::yChanged, this, [this](float y){
@@ -20,10 +20,17 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     });
     connect(ui->widget2, &JoyPad::yChanged, this, [this](float y){
         qDebug() << "Joy2 x: " << ui->widget2->x() << " y: " << y;
-    });
+    });*/
+
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_connectionBtn_preesed()
+{
+    qDebug() << "Demande de connexion !";
 }
