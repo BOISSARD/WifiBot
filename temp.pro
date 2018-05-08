@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+#multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,7 +27,7 @@ SOURCES += main.cpp\
         wificonnexionmanager.cpp \
         tcpconnexionmanager.cpp \
         joypad.cpp \
-		robotoutputmanager.cpp
+        robotoutputmanager.cpp
 
 HEADERS  += mainwindow.h \
         inputmanager.h \
@@ -38,8 +39,9 @@ HEADERS  += mainwindow.h \
         wificonnexionmanager.h \
         tcpconnexionmanager.h \
         joypad.h \
-		robotoutputmanager.h
+        robotoutputmanager.h
 
 FORMS    += mainwindow.ui
+#mainwindow2.ui
 
 CONFIG   += console
