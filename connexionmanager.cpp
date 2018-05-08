@@ -1,3 +1,3 @@
 #include "connexionmanager.h"
 
-ConnexionManager::ConnexionManager(){}
+//ConnexionManager::ConnexionManager(){}

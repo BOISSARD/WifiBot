@@ -285,4 +285,3 @@ void JoyPad::mouseMoveEvent(QMouseEvent *event)
 }
 
 
-

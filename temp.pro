@@ -12,28 +12,34 @@ TARGET = temp
 
 TEMPLATE = app
 
+DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
+
 SOURCES += main.cpp\
         mainwindow.cpp \
         inputmanager.cpp \
         keyboardinputmanager.cpp \
         outputmanager.cpp \
         consoleoutputmanager.cpp \
-    direction.cpp \
-    connexionmanager.cpp \
-    wificonnexionmanager.cpp
+        direction.cpp \
+        connexionmanager.cpp \
+        wificonnexionmanager.cpp \
+        tcpconnexionmanager.cpp \
+        joypad.cpp \
+		robotoutputmanager.cpp
 
 HEADERS  += mainwindow.h \
         inputmanager.h \
         keyboardinputmanager.h \
         outputmanager.h \
         consoleoutputmanager.h \
-    direction.h \
-    connexionmanager.h \
-    wificonnexionmanager.h
+        direction.h \
+        connexionmanager.h \
+        wificonnexionmanager.h \
+        tcpconnexionmanager.h \
+        joypad.h \
+		robotoutputmanager.h
 
 FORMS    += mainwindow.ui
 
-#CONFIG   -= qt
 CONFIG   += console
-
-QT += gui

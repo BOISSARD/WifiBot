@@ -5,7 +5,8 @@
 class ConnexionManager
 {
 public:
-    ConnexionManager(int ip, int port);
+    //ConnexionManager();
+    //ConnexionManager(int ip, int port);
     virtual void envoyer();//const Commandes);
     virtual void recevoir();
     virtual void connect();

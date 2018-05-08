@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.5.1, 2018-05-03T14:16:07. -->
+<!-- Written by QtCreator 4.6.1, 2018-05-08T16:08:59. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -61,8 +61,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2013 64bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2013 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2013 64bit3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2013 64bit3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2013_64_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -308,8 +308,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.1</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2015 32bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2015 32bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2015 32bit3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2015 32bit3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win32_msvc2015_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -555,8 +555,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.10</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 32bit (MSVC 2017)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 32bit (MSVC 2017)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 32bit (MSVC 2017)3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 32bit (MSVC 2017)3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2017_winrt_x86_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -751,8 +751,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.2</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2015 64bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2015 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2015 64bit3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2015 64bit3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2015_64_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -998,8 +998,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.3</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2017 64bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2017 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MSVC2017 64bit3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MSVC2017 64bit3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2017_64_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1245,8 +1245,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.4</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MinGW 32bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MinGW 32bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.10.1 MinGW 32bit3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.10.1 MinGW 32bit3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win32_mingw53_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1492,8 +1492,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.5</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP ARMv7</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP ARMv7</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP ARMv72</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP ARMv72</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2015_winrt_armv7_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1688,8 +1688,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.6</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 64bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 64bit2</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 64bit2</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2015_winrt_x64_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1884,8 +1884,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.7</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 32bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 32bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 32bit2</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 32bit2</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2015_winrt_x86_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -2080,8 +2080,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.8</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP armv7 (MSVC 2017)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP armv7 (MSVC 2017)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP armv7 (MSVC 2017)3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP armv7 (MSVC 2017)3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2017_winrt_armv7_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -2276,8 +2276,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.9</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 64bit (MSVC 2017)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 64bit (MSVC 2017)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Qt 5.10.1 for UWP 64bit (MSVC 2017)3</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qt 5.10.1 for UWP 64bit (MSVC 2017)3</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5101.win64_msvc2017_winrt_x64_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>

@@ -136,61 +136,7 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <action name="actionConnecter_en_TCP">
-   <property name="text">
-    <string>Connecter en TCP</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+T</string>
-   </property>
-  </action>
-  <action name="actionFermer">
-   <property name="text">
-    <string>Fermer</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+W</string>
-   </property>
-  </action>
-  <action name="actionFenetre">
-   <property name="text">
-    <string>Fenetre</string>
-   </property>
-  </action>
-  <action name="actionWiimote">
-   <property name="text">
-    <string>Wiimote</string>
-   </property>
-  </action>
-  <action name="actionD_connexion">
-   <property name="text">
-    <string>Déconnexion</string>
-   </property>
-  </action>
-  <action name="actionPageUp">
-   <property name="text">
-    <string>PageUp</string>
-   </property>
-   <property name="shortcut">
-    <string>PgUp</string>
-   </property>
-  </action>
-  <action name="actionPageDown">
-   <property name="text">
-    <string>PageDown</string>
-   </property>
-   <property name="shortcut">
-    <string>PgDown</string>
-   </property>
-  </action>
+  <widget class="QToolBar" name="mainToolBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
