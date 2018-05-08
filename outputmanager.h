@@ -13,8 +13,6 @@ class OutputManager
         OutputManager();
         ~OutputManager();
 
-        void display(int number);
-        virtual void display(string text = "");
         virtual void move(Direction direction, float vitesse) = 0;
         virtual void moveCamera(Direction direction) = 0;
 
