@@ -2,6 +2,7 @@
 #define DIRECTION_H
 
 #include <ostream>
+#include <QDebug>
 
 using namespace std;
 
@@ -20,6 +21,7 @@ enum Direction
 
 inline ostream& operator<<(ostream& os, const Direction& direction )
 {
+    qDebug() << direction;
     switch( direction ){
     case Direction::forward: os << "forward"; break;
     case rightward: os << "rightward"; break;
