@@ -61,4 +61,33 @@ void MainWindow::joypadCamera(float x, float y){
 
 void MainWindow::turnCamera(Direction direction){
     qDebug() << "Tourne caméra vers " << direction;
+    int value = 0, id = 0;
+    switch(direction){
+    case Direction::forward :
+        value = -200;
+        id = 53;
+        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
+        break;
+    case Direction::backward :
+        value = 200;
+        id = 53;
+        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
+        break;
+    case Direction::rightward :
+        value = -200;
+        id = 52;
+        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
+        break;
+    case Direction::leftward :
+        value = 200;
+        id = 52;
+        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
+        break;
+    default : return;
+    }
+    /*stringstream ss;
+    ss << "http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=100948" << id << "&group=1&value=" << value;
+    //string *url; url = new string(ss.str());
+    //qDebug() << "L'url est : " << ss.str();
+    request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));*/
 }
