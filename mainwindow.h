@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <iostream>
 #include "outputmanager.h"
+#include "direction.h"
 
 using namespace std;
 
@@ -18,10 +19,13 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void setOutputManager(OutputManager *output);
 
 private:
     Ui::MainWindow *ui;
     OutputManager *output;
+    void joypadCamera(float x, float y);
+    void turnCamera(Direction direction);
 
 private slots:
     void on_connectionBtn_pressed();

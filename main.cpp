@@ -13,18 +13,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    w.setOutputManager(new ConsoleOutputManager());
     w.show();
-
-    /*OutputManager *op;
-    op = new ConsoleOutputManager();
-
-    InputManager *ip;
-    ip = new KeyboardInputManager();
-
-    op->display("=========\nYOLO TEST\n=========");
-    op->display();
-    while(1)
-    op->display((int)ip->getDirection());*/
 
     return a.exec();
 }
