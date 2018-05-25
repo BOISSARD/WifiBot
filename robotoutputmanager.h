@@ -7,8 +7,8 @@ class RobotOutputManager : public OutputManager
 {
 public:
     RobotOutputManager();
-    void move(Direction direction, float vitesse);
-    void moveCamera(Direction direction);
+    void moveRobot(Direction direction, float vitesse) = 0;
+    void moveCamera(Direction direction, float vitesse) = 0;
 };
 
 #endif // ROBOTOUTPUTMANAGER_H

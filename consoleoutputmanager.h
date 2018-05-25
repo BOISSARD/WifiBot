@@ -10,8 +10,8 @@ class ConsoleOutputManager : public OutputManager
     public:
         ConsoleOutputManager();
         void display(string text);
-        void move(Direction direction, float vitesse);
-        void moveCamera(Direction direction);
+        void moveRobot(Direction direction, float vitesse) = 0;
+        void moveCamera(Direction direction, float vitesse) = 0;
 };
 
 #endif // CONSOLEOUTPUTMANAGER_H

@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <QNetworkRequest>
+#include <QNetworkReply>
 #include <QNetworkAccessManager>
+#include <QThread>
 
 #include <iostream>
 #include <sstream>
@@ -31,9 +33,10 @@ private:
     Ui::MainWindow *ui;
     OutputManager *output;
     void joypadCamera(float x, float y);
-    void turnCamera(Direction direction);
+    void turnCamera(Direction direction, float speed);
     QNetworkAccessManager *manager =new QNetworkAccessManager();
     QNetworkRequest request;
+    QNetworkReply *reply;
 
 private slots:
     void on_connectionBtn_pressed();

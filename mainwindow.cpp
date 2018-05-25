@@ -16,20 +16,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     });
 
     connect(ui->widget2, &JoyPad::xChanged, this, [this](float x){
-        //qDebug() << "Joy2 x: " << x << " y: " << ui->widget2->y();
         joypadCamera(x,ui->widget2->y());
     });
     connect(ui->widget2, &JoyPad::yChanged, this, [this](float y){
-        //qDebug() << "Joy2 x: " << ui->widget2->x() << " y: " << y;
         joypadCamera(ui->widget2->x(),y);
     });
-
 
 }
 
 void MainWindow::setOutputManager(OutputManager *output){
     this->output = output;
-    qDebug() << "Setter de output";
 }
 
 MainWindow::~MainWindow()
@@ -47,47 +43,45 @@ void MainWindow::joypadCamera(float x, float y){
     float xAbs = x < 0 ? x * -1 : x, yAbs = y < 0 ? y * -1 : y;
 
     if(x < 0 && xAbs >= yAbs)
-        turnCamera(Direction::rightward);
+        turnCamera(Direction::rightward,xAbs);
     else if(x > 0 && xAbs >= yAbs)
-        turnCamera(Direction::leftward);
+        turnCamera(Direction::leftward,xAbs);
 
     if(y < 0 && yAbs >= xAbs)
-        turnCamera(Direction::backward);
+        turnCamera(Direction::backward,yAbs);
     else if(y > 0 && yAbs >= xAbs)
-        turnCamera(Direction::forward);
+        turnCamera(Direction::forward,yAbs);
 
-    if(x == 0 && y == 0) turnCamera(Direction::none);
+    if(x == 0 && y == 0) turnCamera(Direction::none,0);
 }
 
-void MainWindow::turnCamera(Direction direction){
-    qDebug() << "Tourne caméra vers " << direction;
-    int value = 0, id = 0;
+void MainWindow::turnCamera(Direction direction, float speed){
+    //qDebug() << "Tourne caméra vers " << direction;
+    int value = 200*speed, id = 0;
     switch(direction){
     case Direction::forward :
-        value = -200;
+        value *= -1;
         id = 53;
-        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
         break;
     case Direction::backward :
-        value = 200;
         id = 53;
-        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
         break;
     case Direction::rightward :
-        value = -200;
+        value *= -1;
         id = 52;
-        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
         break;
     case Direction::leftward :
-        value = 200;
         id = 52;
-        request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));
         break;
     default : return;
     }
-    /*stringstream ss;
-    ss << "http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=100948" << id << "&group=1&value=" << value;
-    //string *url; url = new string(ss.str());
-    //qDebug() << "L'url est : " << ss.str();
-    request.setUrl(QUrl("http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"));*/
+    string str = "http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=100948";
+    str.append(to_string(id));
+    str.append("&group=1&value=");
+    str.append(to_string(value));
+    request.setUrl(QUrl(QString::fromStdString(str)));
+    reply = manager->get(request);
+    /*while (reply->isRunning()) {
+        QThread::msleep(100);
+    }*/
 }

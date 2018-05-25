@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    w.setOutputManager(new ConsoleOutputManager());
+    //w.setOutputManager(new ConsoleOutputManager());
     w.show();
 
     return a.exec();

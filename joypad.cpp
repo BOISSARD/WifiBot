@@ -22,11 +22,11 @@ JoyPad::JoyPad(QWidget *parent, Qt::WindowFlags f) : QWidget(parent, f),
     m_alignment(Qt::AlignCenter)
 {
     m_xAnimation->setEndValue(0.f);
-    m_xAnimation->setDuration(400);
+    m_xAnimation->setDuration(0);
     m_xAnimation->setEasingCurve(QEasingCurve::OutSine);
 
     m_yAnimation->setEndValue(0.f);
-    m_yAnimation->setDuration(400);
+    m_yAnimation->setDuration(0);
     m_yAnimation->setEasingCurve(QEasingCurve::OutSine);
 
     m_returnAnimation->addAnimation(m_xAnimation);
@@ -239,6 +239,8 @@ void JoyPad::mouseReleaseEvent(QMouseEvent *event)
 
     knopPressed = false;
     m_returnAnimation->start();
+
+    emit released();
 }
 
 /**

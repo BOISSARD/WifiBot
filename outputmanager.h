@@ -13,8 +13,8 @@ class OutputManager
         OutputManager();
         ~OutputManager();
 
-        virtual void move(Direction direction, float vitesse) = 0;
-        virtual void moveCamera(Direction direction) = 0;
+        virtual void moveRobot(Direction direction, float vitesse) = 0;
+        virtual void moveCamera(Direction direction, float vitesse) = 0;
 
 };
 
