@@ -3,12 +3,12 @@
 
 #include "outputmanager.h"
 
-class RobotOutputManager : public OutputManager
+class RobotOutputManager : virtual public OutputManager
 {
 public:
     RobotOutputManager();
-    void moveRobot(Direction direction, float vitesse) = 0;
-    void moveCamera(Direction direction, float vitesse) = 0;
+    void moveRobot(Direction direction, float vitesse);
+    void moveCamera(Direction direction, float vitesse);
 };
 
 #endif // ROBOTOUTPUTMANAGER_H

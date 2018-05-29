@@ -5,13 +5,13 @@
 
 using namespace std;
 
-class ConsoleOutputManager : public OutputManager
+class ConsoleOutputManager : virtual public OutputManager
 {
     public:
         ConsoleOutputManager();
         void display(string text);
-        void moveRobot(Direction direction, float vitesse) = 0;
-        void moveCamera(Direction direction, float vitesse) = 0;
+        void moveRobot(Direction direction, float vitesse);
+        void moveCamera(Direction direction, float vitesse);
 };
 
 #endif // CONSOLEOUTPUTMANAGER_H

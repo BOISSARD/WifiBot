@@ -34,6 +34,8 @@ private:
     OutputManager *output;
     void joypadCamera(float x, float y);
     void turnCamera(Direction direction, float speed);
+    void joypadRobot(float x, float y);
+    void moveRobot(Direction direction, float speed);
     QNetworkAccessManager *manager =new QNetworkAccessManager();
     QNetworkRequest request;
     QNetworkReply *reply;

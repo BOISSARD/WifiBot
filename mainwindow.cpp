@@ -9,10 +9,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
 
     connect(ui->widget1, &JoyPad::xChanged, this, [this](float x){
-        qDebug() << "Joy1 x: " << x << " y: " << ui->widget1->y();
+        joypadRobot(x, ui->widget1->y());
     });
     connect(ui->widget1, &JoyPad::yChanged, this, [this](float y){
-        qDebug() << "Joy1 x: " << ui->widget1->x() << " y: " << y;
+        joypadRobot(ui->widget1->x(),y);
     });
 
     connect(ui->widget2, &JoyPad::xChanged, this, [this](float x){
@@ -84,4 +84,23 @@ void MainWindow::turnCamera(Direction direction, float speed){
     /*while (reply->isRunning()) {
         QThread::msleep(100);
     }*/
+}
+
+void MainWindow::joypadRobot(float x, float y){
+    qDebug() << "Robot x: " << x << " y: " << y;
+    float xAbs = x < 0 ? x * -1 : x, yAbs = y < 0 ? y * -1 : y;
+
+    if(x < 0 && xAbs >= yAbs)
+        moveRobot(Direction::rightward,xAbs);
+    else if(x > 0 && xAbs >= yAbs)
+        moveRobot(Direction::leftward,xAbs);
+
+    if(y < 0 && yAbs >= xAbs)
+        moveRobot(Direction::backward,yAbs);
+    else if(y > 0 && yAbs >= xAbs)
+        moveRobot(Direction::forward,yAbs);
+}
+
+void MainWindow::moveRobot(Direction direction, float speed){
+    output->moveRobot(direction,speed);
 }
