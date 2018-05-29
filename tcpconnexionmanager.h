@@ -11,13 +11,16 @@
 
 #include "connexionmanager.h"
 
-class TCPConnexionManager
+class TCPConnexionManager// : virtual public ConnexionManager
 {
 public:
     TCPConnexionManager();
 
 private:
-
+    void envoyer();//const Commandes);
+    void recevoir();
+    void connect();
+    void disconnect();
 };
 
 #endif // WIFICONNEXIONMANAGER_H
