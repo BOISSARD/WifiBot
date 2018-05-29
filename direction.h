@@ -29,6 +29,7 @@ inline ostream& operator<<(ostream& os, const Direction& direction )
     case leftward: os << "leftward"; break;
     default: os << "none"; break;
     }
+    return os;
 }
 
 #endif // DIRECTION_H

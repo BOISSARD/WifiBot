@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    ConnexionManager* cm;// = new TCPConnexionManager();//TCP
+    ConnexionManager* cm = new TCPConnexionManager();//TCP
     OutputManager* om = new RobotOutputManager();
     om->setConnexionManager(cm);
 
