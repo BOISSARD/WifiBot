@@ -1,9 +1,6 @@
 #include "tcpconnexionmanager.h"
 
-TCPConnexionManager::TCPConnexionManager()
-{
-
-}
+TCPConnexionManager::TCPConnexionManager(){}
 
 void TCPConnexionManager::envoyer(){
 

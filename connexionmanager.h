@@ -6,14 +6,10 @@ class ConnexionManager
     public:
         ConnexionManager();
         //ConnexionManager(int ip, int port);
-        void envoyer();//const Commandes);
-        void recevoir();
-        virtual void connect();
-        virtual void disconnect();
-        /*virtual void envoyer();//const Commandes);
-        virtual void recevoir();
-        virtual void connect();
-        virtual void disconnect();*/
+        virtual void envoyer() = 0;
+        virtual void recevoir() = 0;
+        virtual void connect() = 0;
+        virtual void disconnect() = 0;
 };
 
 #endif // CONNEXIONMANAGER_H

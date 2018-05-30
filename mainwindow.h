@@ -2,9 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#include <QNetworkAccessManager>
 #include <QThread>
 
 #include <iostream>
@@ -36,9 +33,6 @@ private:
     void turnCamera(Direction direction, float speed);
     void joypadRobot(float x, float y);
     void moveRobot(Direction direction, float speed);
-    QNetworkAccessManager *manager =new QNetworkAccessManager();
-    QNetworkRequest request;
-    QNetworkReply *reply;
 
 private slots:
     void on_connectionBtn_pressed();

@@ -16,8 +16,8 @@ class OutputManager
 
         void setConnexionManager(ConnexionManager* connexion);
 
-        virtual void moveRobot(Direction direction, float vitesse) = 0;
-        virtual void moveCamera(Direction direction, float vitesse) = 0;
+        virtual void moveRobot(Direction direction, float speed) = 0;
+        virtual void moveCamera(Direction direction, float speed) = 0;
 
     private:
         ConnexionManager* connexion;
