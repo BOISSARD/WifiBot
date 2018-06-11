@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include <stdlib.h>
-//#include <unistd.h>
-//#include <arpa/inet.h>
-//#include <sys/socket.h>
-//#include <QNetworkAccessManager>
-//#include <QNetworkRequest>
+
+#include <QTcpSocket>
+#include <QString>
+#include <QTimer>
+#include <QByteArray>
+#include <QDataStream>
+#include <QHostAddress>
 
 #include "connexionmanager.h"
 
@@ -15,10 +17,16 @@ class TCPConnexionManager : virtual public ConnexionManager
 {
     public:
         TCPConnexionManager();
-        void envoyer();//const Commandes);
-        void recevoir();
-        void connect();
+        void send(int LSpeed, int RSpeed);//const Commandes);
+        void receive();
+        void connect(QString botHost, QString port);
         void disconnect();
+
+    private:
+        QTcpSocket* tcpSocket;
+        QByteArray* sendingByteArray;
+        QTimer* sendingTimer;
+        PIDSettings pidMode;
 };
 
 #endif // WIFICONNEXIONMANAGER_H

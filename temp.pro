@@ -24,7 +24,6 @@ SOURCES += main.cpp\
         consoleoutputmanager.cpp \
         direction.cpp \
         connexionmanager.cpp \
-        wificonnexionmanager.cpp \
         tcpconnexionmanager.cpp \
         joypad.cpp \
         robotoutputmanager.cpp
@@ -36,7 +35,6 @@ HEADERS  += mainwindow.h \
         consoleoutputmanager.h \
         direction.h \
         connexionmanager.h \
-        wificonnexionmanager.h \
         tcpconnexionmanager.h \
         joypad.h \
         robotoutputmanager.h

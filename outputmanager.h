@@ -19,7 +19,11 @@ class OutputManager
         virtual void moveRobot(Direction direction, float speed) = 0;
         virtual void moveCamera(Direction direction, float speed) = 0;
 
-    private:
+        ConnexionManager* getConnexion(){
+            return connexion;
+        }
+
+    protected:
         ConnexionManager* connexion;
 };
 

@@ -3,7 +3,9 @@
 RobotOutputManager::RobotOutputManager(){}
 
 void RobotOutputManager::moveRobot(Direction direction, float speed){
-    //qDebug() << "Le robot se déplace dans la direction " << (int)direction << " à la vitesse " << speed;
+    int speedI = speed*1000;
+    qDebug() << "Le robot se déplace dans la direction " << (int)direction << " à la vitesse " << speedI;
+    connexion->send(speedI,speedI);
 }
 
 void RobotOutputManager::moveCamera(Direction direction, float speed){

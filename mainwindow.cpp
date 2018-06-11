@@ -36,6 +36,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_connectionBtn_pressed()
 {
     qDebug() << "Demande de connexion !";
+    output->getConnexion()->connect("192.168.1.106","15020");
 }
 
 void MainWindow::joypadCamera(float x, float y){
