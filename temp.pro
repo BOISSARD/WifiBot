@@ -26,7 +26,8 @@ SOURCES += main.cpp\
         connexionmanager.cpp \
         tcpconnexionmanager.cpp \
         joypad.cpp \
-        robotoutputmanager.cpp
+        robotoutputmanager.cpp \
+    videodisplay.cpp
 
 HEADERS  += mainwindow.h \
         inputmanager.h \
@@ -37,7 +38,8 @@ HEADERS  += mainwindow.h \
         connexionmanager.h \
         tcpconnexionmanager.h \
         joypad.h \
-        robotoutputmanager.h
+        robotoutputmanager.h \
+    videodisplay.h
 
 FORMS    += mainwindow.ui
 #mainwindow2.ui
