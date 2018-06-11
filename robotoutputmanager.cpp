@@ -3,9 +3,31 @@
 RobotOutputManager::RobotOutputManager(){}
 
 void RobotOutputManager::moveRobot(Direction direction, float speed){
-    int speedI = speed*1000;
+    int speedI = speed*CAMERAPORCENT;
+    int speedL, speedR;
     qDebug() << "Le robot se déplace dans la direction " << (int)direction << " à la vitesse " << speedI;
-    connexion->send(speedI,speedI);
+    switch(direction){
+        case Direction::forward :
+            speedL = speedI;
+            speedR = speedI;
+        break;
+        case Direction::backward :
+            speedL = -speedI;
+            speedR = -speedI;
+        break;
+        case Direction::leftward :
+            speedL = speedI;
+            speedR = -speedI;
+        break;
+        case Direction::rightward :
+            speedL = -speedI;
+            speedR = speedI;
+        break;
+        default :
+        speedL = speedR = 0;
+    }
+
+    connexion->send(speedL,speedR);
 }
 
 void RobotOutputManager::moveCamera(Direction direction, float speed){

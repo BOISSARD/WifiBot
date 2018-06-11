@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QThread>
+#include <QDebug>
+#include <QKeyEvent>
 
 #include <iostream>
 #include <sstream>
@@ -25,6 +27,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void setOutputManager(OutputManager *output);
+
+protected :
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;

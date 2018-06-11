@@ -7,6 +7,8 @@
 
 #include "outputmanager.h"
 
+#define CAMERAPORCENT 2000
+
 class RobotOutputManager : virtual public OutputManager
 {
 public:

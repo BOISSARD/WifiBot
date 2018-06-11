@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QDebug>
 #include "joypad.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -77,4 +76,41 @@ void MainWindow::joypadRobot(float x, float y){
 
 void MainWindow::moveRobot(Direction direction, float speed){
     output->moveRobot(direction,speed);
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event){
+    int speedR = 1, speedC = 200;
+
+    switch(event->key()){
+        //bot commands
+        case Qt::Key_Z:
+            moveRobot(Direction::forward,speedR);
+            break;
+        case Qt::Key_S:
+            moveRobot(Direction::backward,speedR);
+            break;
+        case Qt::Key_D:
+            moveRobot(Direction::rightward,speedR);
+            break;
+        case Qt::Key_Q:
+            moveRobot(Direction::leftward,speedR);
+            break;
+        /*case Qt::Key_Control:
+            cameraCommands(CAMERA_RESET);
+            break;*/
+        case Qt::Key_Up:
+            turnCamera(Direction::forward,speedC);
+            break;
+        case Qt::Key_Left:
+            turnCamera(Direction::leftward,speedC);
+            break;
+        case Qt::Key_Down:
+            turnCamera(Direction::backward,speedC);
+            break;
+        case Qt::Key_Right:
+            turnCamera(Direction::rightward,speedC);
+            break;
+        default :
+            moveRobot(Direction::none,0);
+    }
 }
