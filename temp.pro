@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network webenginewidgets
 #multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -27,7 +27,7 @@ SOURCES += main.cpp\
         tcpconnexionmanager.cpp \
         joypad.cpp \
         robotoutputmanager.cpp \
-    videodisplay.cpp
+    #videodisplay.cpp
 
 HEADERS  += mainwindow.h \
         inputmanager.h \
@@ -39,7 +39,7 @@ HEADERS  += mainwindow.h \
         tcpconnexionmanager.h \
         joypad.h \
         robotoutputmanager.h \
-    videodisplay.h
+    #videodisplay.h
 
 FORMS    += mainwindow.ui
 #mainwindow2.ui

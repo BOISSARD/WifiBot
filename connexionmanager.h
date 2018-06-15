@@ -10,7 +10,7 @@ class ConnexionManager
         //ConnexionManager(int ip, int port);
         virtual void send(int LSpeed, int RSpeed) = 0;
         virtual void receive() = 0;
-        virtual void connect(QString botHost, QString port) = 0;
+        virtual bool connect(QString botHost, QString port) = 0;
         virtual void disconnect() = 0;
 
    protected:

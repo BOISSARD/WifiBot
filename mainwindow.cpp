@@ -3,9 +3,13 @@
 
 #include "joypad.h"
 
+#include <QWebEngineView>
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    cameraStream();
 
     connect(ui->widget1, &JoyPad::xChanged, this, [this](float x){
         joypadRobot(x, ui->widget1->y());
@@ -21,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         joypadCamera(ui->widget2->x(),y);
     });
 
+
 }
 
 void MainWindow::setOutputManager(OutputManager *output){
@@ -34,8 +39,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_connectionBtn_pressed()
 {
-    qDebug() << "Demande de connexion !";
-    output->getConnexion()->connect("192.168.1.106","15020");
+    if(output->getConnexion()->connect(ui->IpName->text(),ui->TCPPort->text()))
+        ui->connectionBtn->setText("Déconnection");
+    else ui->connectionBtn->setText("Connexion");
 }
 
 void MainWindow::joypadCamera(float x, float y){
@@ -113,4 +119,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event){
         default :
             moveRobot(Direction::none,0);
     }
+}
+
+void MainWindow::cameraStream(){
+    QWebEngineView *view = new QWebEngineView(ui->video);
+    view->load(QUrl("http://192.168.1.106:8080/?action=stream"));
+    view->show();
 }

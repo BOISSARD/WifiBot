@@ -1,6 +1,8 @@
 #ifndef TCPCONNEXIONMANAGER_H
 #define TCPCONNEXIONMANAGER_H
 
+#define CAMERAPORCENT 2000
+
 #include <iostream>
 #include <stdlib.h>
 
@@ -19,7 +21,7 @@ class TCPConnexionManager : virtual public ConnexionManager
         TCPConnexionManager();
         void send(int LSpeed, int RSpeed);//const Commandes);
         void receive();
-        void connect(QString botHost, QString port);
+        bool connect(QString botHost, QString port);
         void disconnect();
 
     private:

@@ -10,11 +10,9 @@ TCPConnexionManager::TCPConnexionManager(){
 void TCPConnexionManager::send(int LSpeed, int RSpeed){
    quint32 Lvalue=qMin(qAbs(LSpeed),CAMERAPORCENT);
    quint32 Rvalue=qMin(qAbs(RSpeed),CAMERAPORCENT);
-   qDebug() << Lvalue << " ; " << Rvalue;
 
    sendingByteArray->clear();
    sendingByteArray->append((char)0xff);
-   qDebug() << "Bytes : " << sendingByteArray;
    sendingByteArray->append((char)0x07);
    sendingByteArray->append((char)(Lvalue*240/CAMERAPORCENT));
    sendingByteArray->append((char)0x00);
@@ -23,12 +21,9 @@ void TCPConnexionManager::send(int LSpeed, int RSpeed){
    sendingByteArray->append(((char)pidMode&0b10101000)|(LSpeed<0?0b00000000:0b01000000)|(RSpeed<0?0b00000000:0b00010000));
 
    quint16 crcValue = ConnexionManager::crc16(sendingByteArray,1);
-   qDebug() << crcValue;
 
    sendingByteArray->append((char)(crcValue));
    sendingByteArray->append((char)(crcValue>>8));
-
-   qDebug() << sendingByteArray;
 
    tcpSocket->write(*sendingByteArray);
    receive();
@@ -38,13 +33,16 @@ void TCPConnexionManager::receive(){
 
 }
 
-void TCPConnexionManager::connect(QString botHost, QString port){
+bool TCPConnexionManager::connect(QString botHost, QString port){
+    qDebug() << "Demande de connexion à "+botHost+":"+port+ " !";
     tcpSocket->connectToHost(botHost,port.toUInt());
     if(tcpSocket->waitForConnected(20)){
         sendingTimer->start();
         qDebug() << "Connection done";
+        return true;
     }else{
         qDebug() << "Connection failed";
+        return false;
     }
 }
 

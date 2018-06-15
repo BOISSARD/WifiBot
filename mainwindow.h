@@ -38,9 +38,11 @@ private:
     void turnCamera(Direction direction, float speed);
     void joypadRobot(float x, float y);
     void moveRobot(Direction direction, float speed);
+    void cameraStream();
 
 private slots:
     void on_connectionBtn_pressed();
+
 };
 
 #endif // MAINWINDOW_H

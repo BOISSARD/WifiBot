@@ -31,7 +31,6 @@ void RobotOutputManager::moveRobot(Direction direction, float speed){
 }
 
 void RobotOutputManager::moveCamera(Direction direction, float speed){
-    //qDebug() << "La camera se déplace dans la direction " << (int)direction << " à la vitesse " << speed;
     int value = 200*speed, id = 0;
     switch(direction){
     case Direction::forward :
@@ -56,8 +55,5 @@ void RobotOutputManager::moveCamera(Direction direction, float speed){
     str.append(to_string(value));
     request.setUrl(QUrl(QString::fromStdString(str)));
     reply = manager->get(request);
-    /*while (reply->isRunning()) {
-        QThread::msleep(100);
-    }*/
 }
 
