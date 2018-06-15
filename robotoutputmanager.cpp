@@ -5,7 +5,7 @@ RobotOutputManager::RobotOutputManager(){}
 void RobotOutputManager::moveRobot(Direction direction, float speed){
     int speedI = speed*CAMERAPORCENT;
     int speedL, speedR;
-    qDebug() << "Le robot se déplace dans la direction " << (int)direction << " à la vitesse " << speedI;
+    //qDebug() << "Le robot se déplace dans la direction " << (int)direction << " à la vitesse " << speedI;
     switch(direction){
         case Direction::forward :
             speedL = speedI;
@@ -27,7 +27,19 @@ void RobotOutputManager::moveRobot(Direction direction, float speed){
         speedL = speedR = 0;
     }
 
-    connexion->send(speedL,speedR);
+    QByteArray* sendingByteArray;
+    sendingByteArray = new QByteArray();
+    quint32 Lvalue=qMin(qAbs(speedL),CAMERAPORCENT);
+    quint32 Rvalue=qMin(qAbs(speedR),CAMERAPORCENT);
+    sendingByteArray->clear();
+    sendingByteArray->append((char)0xff);
+    sendingByteArray->append((char)0x07);
+    sendingByteArray->append((char)(Lvalue*240/CAMERAPORCENT));
+    sendingByteArray->append((char)0x00);
+    sendingByteArray->append((char)(Rvalue*240/CAMERAPORCENT));
+    sendingByteArray->append((char)0x00);
+    sendingByteArray->append(((char)connexion->pidMode&0b10101000)|(speedL<0?0b00000000:0b01000000)|(speedR<0?0b00000000:0b00010000));
+    connexion->send(sendingByteArray);
 }
 
 void RobotOutputManager::moveCamera(Direction direction, float speed){

@@ -19,7 +19,7 @@ class TCPConnexionManager : virtual public ConnexionManager
 {
     public:
         TCPConnexionManager();
-        void send(int LSpeed, int RSpeed);//const Commandes);
+        void send(QByteArray* sendingByteArray);
         void receive();
         bool connect(QString botHost, QString port);
         void disconnect();
@@ -28,7 +28,6 @@ class TCPConnexionManager : virtual public ConnexionManager
         QTcpSocket* tcpSocket;
         QByteArray* sendingByteArray;
         QTimer* sendingTimer;
-        PIDSettings pidMode;
 };
 
 #endif // WIFICONNEXIONMANAGER_H
