@@ -43,25 +43,28 @@ void RobotOutputManager::moveRobot(Direction direction, float speed){
 }
 
 void RobotOutputManager::moveCamera(Direction direction, float speed){
-    int value = 200*speed, id = 0;
+    int value = 200*speed, id = 100948;
+    string str = "http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=";
     switch(direction){
     case Direction::forward :
         value *= -1;
-        id = 53;
+        id = 10094853;
         break;
     case Direction::backward :
-        id = 53;
+        id = 10094853;
         break;
     case Direction::rightward :
         value *= -1;
-        id = 52;
+        id = 10094852;
         break;
     case Direction::leftward :
-        id = 52;
+        id = 10094852;
         break;
-    default : return;
+    default :
+        id = 168062211;
+        value = 3;
+        break;
     }
-    string str = "http://192.168.1.106:8080/?action=command&dest=0&plugin=0&id=100948";
     str.append(to_string(id));
     str.append("&group=1&value=");
     str.append(to_string(value));

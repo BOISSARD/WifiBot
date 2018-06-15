@@ -45,6 +45,8 @@ private:
 
 private slots:
     void on_connectionBtn_pressed();
+    void on_resetCamera_pressed();
+    void on_resetRobot_pressed();
 
 };
 

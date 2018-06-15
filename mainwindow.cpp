@@ -50,8 +50,18 @@ void MainWindow::on_connectionBtn_pressed()
     cameraStream(ui->IpName->text(),ui->HTTPPort->text());
 }
 
+void MainWindow::on_resetCamera_pressed()
+{
+    turnCamera(Direction::none,0);
+}
+
+void MainWindow::on_resetRobot_pressed()
+{
+    moveRobot(Direction::none,0);
+}
+
 void MainWindow::joypadCamera(float x, float y){
-    qDebug() << "Camera : x = " << x << ", y = " << y ;
+    //qDebug() << "Camera : x = " << x << ", y = " << y ;
     float xAbs = x < 0 ? x * -1 : x, yAbs = y < 0 ? y * -1 : y;
 
     if(x < 0 && xAbs >= yAbs)
@@ -72,7 +82,7 @@ void MainWindow::turnCamera(Direction direction, float speed){
 }
 
 void MainWindow::joypadRobot(float x, float y){
-    qDebug() << "Robot x: " << x << " y: " << y;
+    //qDebug() << "Robot x: " << x << " y: " << y;
     float xAbs = x < 0 ? x * -1 : x, yAbs = y < 0 ? y * -1 : y;
 
     if(x < 0 && xAbs >= yAbs)
@@ -121,6 +131,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event){
             break;
         case Qt::Key_Right:
             turnCamera(Direction::rightward,speedC);
+            break;
+        case Qt::CTRL:
+            turnCamera(Direction::none,0);
             break;
         default :
             moveRobot(Direction::none,0);
