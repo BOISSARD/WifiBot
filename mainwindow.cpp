@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 {
     ui->setupUi(this);
 
-    cameraStream();
+    cameraStream(ui->IpName->text(),ui->HTTPPort->text());
 
     connect(ui->widget1, &JoyPad::xChanged, this, [this](float x){
         joypadRobot(x, ui->widget1->y());
@@ -24,8 +24,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->widget2, &JoyPad::yChanged, this, [this](float y){
         joypadCamera(ui->widget2->x(),y);
     });
-
-
 }
 
 void MainWindow::setOutputManager(OutputManager *output){
@@ -39,9 +37,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_connectionBtn_pressed()
 {
-    if(output->getConnexion()->connect(ui->IpName->text(),ui->TCPPort->text()))
-        ui->connectionBtn->setText("Déconnection");
-    else ui->connectionBtn->setText("Connexion");
+    if(!connected){
+        if(output->getConnexion()->connect(ui->IpName->text(),ui->TCPPort->text())){
+            ui->connectionBtn->setText("Déconnexion");
+            connected = true;
+        }
+    }else{
+        output->getConnexion()->disconnect();
+        ui->connectionBtn->setText("Connexion");
+        connected = false;
+    }
+    cameraStream(ui->IpName->text(),ui->HTTPPort->text());
 }
 
 void MainWindow::joypadCamera(float x, float y){
@@ -85,7 +91,7 @@ void MainWindow::moveRobot(Direction direction, float speed){
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event){
-    int speedR = 1, speedC = 200;
+    int speedR = 1, speedC = 80;
 
     switch(event->key()){
         //bot commands
@@ -121,8 +127,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event){
     }
 }
 
-void MainWindow::cameraStream(){
+void MainWindow::cameraStream(QString ip, QString port){
+    QUrl url = QUrl("http://"+ip+":"+port+"/?action=stream");
+    qDebug() << url;
     QWebEngineView *view = new QWebEngineView(ui->video);
-    view->load(QUrl("http://192.168.1.106:8080/?action=stream"));
+    view->load(url);
     view->show();
 }

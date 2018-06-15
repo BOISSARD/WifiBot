@@ -47,6 +47,6 @@ bool TCPConnexionManager::connect(QString botHost, QString port){
 }
 
 void TCPConnexionManager::disconnect(){
-
+    tcpSocket->disconnect();
 }
 

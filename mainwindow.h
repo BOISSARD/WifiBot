@@ -5,6 +5,7 @@
 #include <QThread>
 #include <QDebug>
 #include <QKeyEvent>
+#include <QString>
 
 #include <iostream>
 #include <sstream>
@@ -38,7 +39,9 @@ private:
     void turnCamera(Direction direction, float speed);
     void joypadRobot(float x, float y);
     void moveRobot(Direction direction, float speed);
-    void cameraStream();
+    void cameraStream(QString ip, QString port);
+    bool connected = false;
+    QString oldIp, oldHttpPort;
 
 private slots:
     void on_connectionBtn_pressed();
